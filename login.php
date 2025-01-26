@@ -34,7 +34,7 @@ include_once "./Functies/User.php";
 
     <div class="form">
         <h1>Log In</h1>
-        <form action="" method="post">
+        <form action="login.php" method="post">
            <label for="username" name="username">Username :</label><br>
            <input type="text" name="username" required><br><br>
            <label for="password" name="password">Password : </label><br>
@@ -43,7 +43,7 @@ include_once "./Functies/User.php";
         </form>
         <div class="otherlinks">
            <a href="">Forgot Password</a>
-           <a href="#">Not registered??</a>
+           <a href="./register.php">Not registered??</a>
         </div>
     </div>
     

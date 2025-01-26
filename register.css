@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:trail ;
+    src: url('./fonts/Questrial-Regular.ttf');
+}
+
+@font-face {
+    font-family: without;
+    src: url('./fonts/WithoutAltSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: fontspring;
+    src: url('./fonts/Fontspring-DEMO-skillet-regular.otf');
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navbar img{
+    width: 10vw;
+}
+
+.navbar p{
+   margin-left: 2%;
+}
+
+.home{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home a,.login a{
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    font-family: trail;
+}
+
+.login{
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.form-div button{
+    align-items: center;
+    margin-left: 48%;
+    padding: 10px;
+}
+
+.form-div h1{
+    text-align: center;
+}
+
+.form-div .form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
