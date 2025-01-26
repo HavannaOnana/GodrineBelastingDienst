@@ -1,9 +1,49 @@
 <?php
-
 include_once "./Functies/User.php";
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Create a User object
+    $user = new User();
 
+    // Retrieve form data
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $name = $_POST['name'] ?? '';
+    $leeftijd = $_POST['leeftijd'] ?? '';
+    $woonplaats = $_POST['woonplaats'] ?? '';
+    $adres = $_POST['adres'] ?? '';
+    $gezinssamenstelling = $_POST['gezinssamenstelling'] ?? '';
+    $inkomen = $_POST['inkomen'] ?? '';
+    $partnernaam = $_POST['partnernaam'] ?? '';
+    $partnerleeftijd = $_POST['partnerleeftijd'] ?? '';
 
+    // Validate required fields (simple example)
+    if (!empty($username) && !empty($password)) {
+        // Call the insertUser method
+        $result = $user->insertUser(
+            $username,
+            $password,
+            $name,
+            $leeftijd,
+            $woonplaats,
+            $adres,
+            $gezinssamenstelling,
+            $inkomen,
+            $partnernaam,
+            $partnerleeftijd
+        );
+
+        if ($result) {
+            // Redirect to another page (e.g., success.php)
+            header("Location: ./login.php");
+            exit(); // Ensure the script stops after the redirect
+        } else {
+            echo "Failed to register user.";
+        }
+    } else {
+        echo "Username and password are required!";
+    }
+}
 ?>
 
 

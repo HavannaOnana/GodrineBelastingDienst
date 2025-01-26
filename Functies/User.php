@@ -29,6 +29,17 @@ class User{
             ];
             return $this->db->run($query,$params);
     }
+
+    // dit check of the gebruikers gegevens wel goed is of niet 
+    public function validateUser($username, $password) {
+        $query = "SELECT * FROM users WHERE username = :username AND password = :password";
+        $params = [
+            ":username" => $username,
+            ":password" => $password
+        ];
+        $result = $this->db->run($query, $params);
+        return $result->fetch(); 
+    }
 }
 
 

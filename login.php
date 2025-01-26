@@ -1,24 +1,37 @@
 <?php
-
 include_once "./Functies/User.php";
 
+$message = "";
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Create a User object
+    $user = new User();
 
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
+    $result = $user->validateUser($username, $password);
 
+    if ($result) {
+        
+        header("Location: ./Klant/klant.php");
+        exit();
+    } else {
+        // Invalid username or password
+        $message = "Invalid username or password. Please try again.";
+    }
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In </title>
+    <title>Log In</title>
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-
  <div class="navbar">
         <img src="./images/BD logo.png" alt="">
         <div class="home">
@@ -31,14 +44,16 @@ include_once "./Functies/User.php";
         </div>
     </div>
 
-
     <div class="form">
         <h1>Log In</h1>
+        <?php if ($message): ?>
+            <p style="color: red;"><?php echo $message; ?></p>
+        <?php endif; ?>
         <form action="login.php" method="post">
            <label for="username" name="username">Username :</label><br>
            <input type="text" name="username" required><br><br>
            <label for="password" name="password">Password : </label><br>
-           <input type="text" name="password" required><br><br>
+           <input type="password" name="password" required><br><br>
            <button type="submit">Log in</button>
         </form>
         <div class="otherlinks">
@@ -64,7 +79,6 @@ include_once "./Functies/User.php";
             <p>&copy; Godrine Manu 2025</p>
         </div>
     </div>
-
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
