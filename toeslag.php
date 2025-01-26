@@ -35,6 +35,20 @@ include_once "./includes/Database.php";
         </div>
     </div>
 
+    <div class="toeslageninfo">
+        <div class="zorgtoeslag">
+            <h3>Zorgtoeslag</h3>
+            <p>Lees alles over zorgtoeslag</p>
+        </div>
+        <div class="huurtoeslag">
+            <h3>Huurtoeslag</h3>
+            <p>Lees alles over huurtoeslag</p>
+        </div>
+        <div class="kinderopvangtoeaslag">
+            <h3>Kinderopvangtoeslag</h3>
+            <p>Lees alles over kinderopvangtoeaslag</p>
+        </div>
+    </div>
 
 
 

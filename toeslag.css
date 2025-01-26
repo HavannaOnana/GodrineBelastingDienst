@@ -13,6 +13,11 @@ body{
     src: url('./fonts/WithoutAltSans-Bold.ttf');
 }
 
+@font-face {
+    font-family: fontspring;
+    src: url('./fonts/Fontspring-DEMO-skillet-regular.otf');
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -94,4 +99,27 @@ body{
 .section-text p{
     font-family: trail;
     font-size: smaller;
+}
+
+.toeslageninfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.zorgtoeslag,.huurtoeslag,.kinderopvangtoeaslag{
+    width: 20%;
+    background-color: antiquewhite;
+}
+
+.zorgtoeslag h3,.kinderopvangtoeaslag h3,.huurtoeslag h3{
+    font-family: without;
+    color: blueviolet;
+}
+
+.zorgtoeslag p,.kinderopvangtoeaslag p , .huurtoeslag p{
+    font-family: trail;
 }
