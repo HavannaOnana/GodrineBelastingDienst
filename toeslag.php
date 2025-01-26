@@ -28,6 +28,13 @@ include_once "./includes/Database.php";
         </div>
     </div>
 
+    <div class="section">
+        <div class="section-text">
+            <h1>Toeslagen</h1>
+        <p>Een financiële bijdrage van de overheid bedoeld om huishoudens te ondersteunen<br> bij het betalen van noodzakelijke kosten, zoals de zorgverzekering, de opvoeding en <br>verzorging van kinderen, de huur van een woning en de kosten voor kinderopvang</p>
+        </div>
+    </div>
+
 
 
 

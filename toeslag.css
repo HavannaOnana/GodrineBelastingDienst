@@ -3,6 +3,16 @@ body{
     padding: 0;
 }
 
+@font-face {
+    font-family:trail ;
+    src: url('./fonts/Questrial-Regular.ttf');
+}
+
+@font-face {
+    font-family: without;
+    src: url('./fonts/WithoutAltSans-Bold.ttf');
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -30,6 +40,7 @@ body{
     margin-left: 5%;
     text-decoration: none;
     color: black;
+    font-family: trail;
 }
 
 .login{
@@ -37,4 +48,50 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.section {
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/moeder.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    filter: brightness(0.3); 
+    z-index: 1; 
+}
+
+.section .section-text {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    opacity: 1; 
+    padding: 20px;
+    margin-top: 5%;
+    font-size: larger;
+}
+
+.section-text h1{
+    font-family: without;
+}
+
+.section-text p{
+    font-family: trail;
+    font-size: smaller;
 }
