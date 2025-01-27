@@ -98,10 +98,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <option value="pleeggezin">Pleeggezin</option>
                         <option value="anders">Anders</option>
                     </select><br><br>
-                    <label for="inkomen" name="inkomen">Inkomen:</label><br>
+                    <label for="inkomen" name="inkomen">Inkomen:(optioneel)</label><br>
                     <input type="text" name="inkomen"><br><br>
                     <label for="partnernaam" name="partnernaam">Partnernaam:</label><br>
-                    <input type="text" name="partnernaam"><br><br>
+                    <input type="text" name="partnernaam" required><br><br>
                     <label for="partnerleeftijd" name="partnerleeftijd">Partnerleeftijd:</label><br>
                     <input type="text" name="partnerleeftijd">
                 </div>

@@ -40,6 +40,8 @@ class User{
         $result = $this->db->run($query, $params);
         return $result->fetch(); 
     }
+
+    
 }
 
 
