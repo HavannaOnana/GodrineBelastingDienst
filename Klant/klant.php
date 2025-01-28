@@ -49,17 +49,17 @@ $user = $huurtoeslag->selectUserByName($username);
             <ion-icon name="woman"></ion-icon>
             <a href="../Klant/zorgtoeslag.php">Kinderopvangtoeslag</a>
         </div>
+
+        <div class="home">
+            <ion-icon name="person"></ion-icon>
+            <a href="../login.php">Logout</a>
+        </div>
         
     </div>
 
      <div class="content">
-        <h1>Hoi</h1>
-        <?php if ($user): ?>
-            <p>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></p>
-            <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span></p>
-        <?php else: ?>
-            <p>Er is iets misgegaan. Probeer het opnieuw.</p>
-        <?php endif; ?>
+        <h1>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></h1>
+        <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span></p>
     </div>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

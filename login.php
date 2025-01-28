@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once "../Functies/User.php";
+include_once "./Functies/User.php";
+
 
 $message = "";
 

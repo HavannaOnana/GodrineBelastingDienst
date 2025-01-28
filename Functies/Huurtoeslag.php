@@ -1,6 +1,5 @@
 <?php
-
-include_once "./Functies/User.php";
+include_once "../includes/Database.php";
 
 class Huurtoeslag{
 
