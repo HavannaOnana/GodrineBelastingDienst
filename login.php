@@ -1,5 +1,6 @@
 <?php
-include_once "./Functies/User.php";
+session_start();
+include_once "../Functies/User.php";
 
 $message = "";
 
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $user->validateUser($username, $password);
 
     if ($result) {
-        
+        $_SESSION['username'] = $username;
         header("Location: ./Klant/klant.php");
         exit();
     } else {

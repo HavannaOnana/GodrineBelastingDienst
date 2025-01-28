@@ -1,5 +1,5 @@
 <?php
-include_once "./Functies/User.php";
+include_once "../Functies/User.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Create a User object

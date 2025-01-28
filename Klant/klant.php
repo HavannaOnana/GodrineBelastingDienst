@@ -1,8 +1,19 @@
 <?php
 
+session_start();
+include_once "../Functies/Huurtoeslag.php";
 
+// Redirect to login if not logged in
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit;
+}
 
+$huurtoeslag = new Huurtoeslag();
 
+// Fetch logged-in user's name and income
+$username = $_SESSION['username'];
+$user = $huurtoeslag->selectUserByName($username);
 
 
 
@@ -39,6 +50,16 @@
             <a href="../Klant/zorgtoeslag.php">Kinderopvangtoeslag</a>
         </div>
         
+    </div>
+
+     <div class="content">
+        <h1>Hoi</h1>
+        <?php if ($user): ?>
+            <p>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></p>
+            <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span></p>
+        <?php else: ?>
+            <p>Er is iets misgegaan. Probeer het opnieuw.</p>
+        <?php endif; ?>
     </div>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
