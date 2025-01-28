@@ -54,3 +54,24 @@ body{
     flex-direction: row;
     align-items: center;
 }
+
+.top-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.top-content h1{
+    font-family: without;
+}
+
+.top-content p{
+    font-family: trail;
+    font-weight: bold;
+}
+
+.top-content p span{
+    font-weight: lighter;
+}

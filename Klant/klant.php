@@ -57,9 +57,9 @@ $user = $huurtoeslag->selectUserByName($username);
         
     </div>
 
-     <div class="content">
+     <div class="top-content">
         <h1>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></h1>
-        <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span></p>
+        <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span> per jaar</p>
     </div>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

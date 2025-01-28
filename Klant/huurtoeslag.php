@@ -50,14 +50,9 @@ $user = $huurtoeslag->selectUserByName($username);
     </div>
 
     
-     <div class="content">
-        <h1>Huurtoeslag</h1>
-        <?php if ($user): ?>
-            <p>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></p>
-            <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span></p>
-        <?php else: ?>
-            <p>Er is iets misgegaan. Probeer het opnieuw.</p>
-        <?php endif; ?>
+      <div class="top-content">
+        <h1>Hallo, <span class="user-name"><?php echo htmlspecialchars($user['name']); ?></span></h1>
+        <p>Inkomen: <span class="user-income"><?php echo htmlspecialchars($user['inkomen']); ?></span> per jaar</p>
     </div>
 
 
